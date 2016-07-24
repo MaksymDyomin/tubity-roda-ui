@@ -1,4 +1,7 @@
 export const GET_SHORTCUT_REQUEST = 'GET_SHORTCUT_REQUEST'
 export const GET_SHORTCUT_SUCCESS = 'GET_SHORTCUT_SUCCESS'
+export const GET_SHORTCUT_FAILED = 'GET_SHORTCUT_FAILED'
+
+export const TUBITY_API_ENDPOINT = 'http://localhost:9990/s'
 
 

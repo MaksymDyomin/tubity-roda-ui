@@ -1,6 +1,7 @@
 import {
   GET_SHORTCUT_REQUEST,
-  GET_SHORTCUT_SUCCESS
+  GET_SHORTCUT_SUCCESS,
+  GET_SHORTCUT_FAILED
 } from '../constants/TubityConstants'
 
 const initialState = {
@@ -15,7 +16,10 @@ export default function shortcut(state = initialState, action) {
       return { ...state, fetching: true }
       
     case GET_SHORTCUT_SUCCESS:
-      return { ...state, shortcuts: [... state.shortcuts, action.payload] , fetching: false }
+      return { ...state, shortcuts: [action.payload, ... state.shortcuts] , fetching: false }
+    
+    case GET_SHORTCUT_FAILED:
+      return { ...state, fetching: false }
       
     default:
       return state;
