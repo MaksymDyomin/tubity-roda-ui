@@ -6,9 +6,21 @@ class TubityShortcutInfo extends Component{
   }
   
   render () {
+    
     return(
             <div id='shortcut_info'>
-              <span>Shortcut for URL is </span>
+           
+              {this.props.isFetching ? (
+              
+                <span>Loading ...</span>
+                                        ) : (
+               this.props.shortcuts.length > 0 ?(
+                                               <span>Shortcut for URL {this.props.shortcuts[0].url} is {this.props.shortcuts[0].shorten_url}</span>
+                                               ):(
+                                               <span />
+                                                  )
+                                             )
+              }
             </div>
            )
   }

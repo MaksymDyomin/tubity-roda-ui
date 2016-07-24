@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 
-
 class TubityForm extends Component{
   constructor (props) {
     super(props)
@@ -10,9 +9,10 @@ class TubityForm extends Component{
   }
   
   render () {
-    let disabledSubmit = !this.state.srcURL //TODO: URL validation
+    
+    let disabledSubmit = !this.state.srcURL || this.props.isFetching //TODO: URL validation
     return(
-           <form className='form' onSubmit={this._onSubmit.bind(this)}>
+           <form className='form'>
              <div className='form_field_wrapper'>
                <label className='form_field_label' htmlFor='srcURL'>
                  Input URL
@@ -21,7 +21,9 @@ class TubityForm extends Component{
                className='form_field_input'
                type='text'
                id='srcURL'
+               value={this.state.srcURL}
                onChange={this._changeSrcUrl.bind(this)}
+               disabled={this.props.isFetching}
                autoCorrect='off'
                autoCapitalize='off'
                spellCheck='false' />
@@ -40,7 +42,8 @@ class TubityForm extends Component{
   }
   
   _onSubmit(){
-    this.props.getShortcut(this.state.srcURL)    
+    this.props.getShortcut(this.state.srcURL)
+    this.setState({srcURL: ''})
   }
 }
 

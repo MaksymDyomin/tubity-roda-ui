@@ -10,8 +10,8 @@ class App extends Component{
     const { getShortcut } = this.props.tubityActions
     return(
            <div>
-           <TubityForm getShortcut={getShortcut}/>
-           <TubityShortcutInfo />
+           <TubityForm getShortcut={getShortcut} isFetching={this.props.fetching} />
+           <TubityShortcutInfo isFetching={this.props.fetching} shortcuts={this.props.shortcuts} />
            </div>
            )
   }
@@ -19,15 +19,16 @@ class App extends Component{
 
 function mapStateToProps(state) {
   return {
-  shortcuts: state.shortcuts,
-  fetching: state.fetching
+    shortcuts: state.tubityReducer.shortcuts,
+    fetching: state.tubityReducer.fetching    
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-  tubityActions: bindActionCreators(tubityActions, dispatch)
+    tubityActions: bindActionCreators(tubityActions, dispatch)
   }
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
