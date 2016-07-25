@@ -8,7 +8,7 @@ $ cd tubity-roda-ui && npm install
 $ npm start
 ```
 
-Visit http://127.0.0.1:8080 with your browser.
+Visit http://127.0.0.1:3000 with your browser.
 
 ## License
 
