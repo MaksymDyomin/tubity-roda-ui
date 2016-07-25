@@ -13,7 +13,7 @@ class TubityForm extends Component{
     let disabledSubmit = !this.state.srcURL || this.props.isFetching //TODO: URL validation
     return(
            <form className='form'>
-             <div className='form_field_wrapper'>
+             <div>
                <label className='form_field_label' htmlFor='srcURL'>
                  Input URL
                </label>
@@ -27,10 +27,8 @@ class TubityForm extends Component{
                autoCorrect='off'
                autoCapitalize='off'
                spellCheck='false' />
-             </div>
-             <div className='form_submit_btn_wrapper'>
-           <button className='form_submit_btn' type='button' disabled={disabledSubmit} onClick={this._onSubmit.bind(this)}>
-                 Get shortcut
+               <button className='form_submit_btn' type='button' disabled={disabledSubmit} onClick={this._onSubmit.bind(this)}>
+               Get shortcut
                </button>
              </div>
            </form>

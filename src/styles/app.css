@@ -89,7 +89,7 @@ h3 {
 .btn:hover {
   background-color: #6d8cb0
 }
-.shortcutsTable
+.shortcuts_table
 {
   border: 1px solid black;
   width: 100%;
@@ -97,4 +97,29 @@ h3 {
 td
 {
   border: 1px solid black;
+}
+
+.shortcuts_div
+{
+  margin-top: 20px;
+}
+
+.form_field_label
+{
+  margin-right: 12px;
+}
+
+.form_submit_btn
+{
+  margin-left: 12px;
+}
+
+.form_submit_btn_wrapper
+{
+  margin-top: 10px;
+}
+
+#shortcut_info
+{
+  margin-top: 20px;
 }
