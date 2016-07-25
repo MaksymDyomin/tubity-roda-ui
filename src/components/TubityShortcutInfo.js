@@ -16,7 +16,7 @@ class TubityShortcutInfo extends Component{
                                         ) : (
                this.props.shortcuts.length > 0 ?(
                                                <span>Shortcut for URL {this.props.shortcuts[0].url} is {this.props.shortcuts[0].shorten_url}</span>
-                                               ):(
+                                               ) : (
                                                <span />
                                                   )
                                              )

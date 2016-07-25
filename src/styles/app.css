@@ -11,7 +11,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, tfoot,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
@@ -88,4 +88,13 @@ h3 {
 }
 .btn:hover {
   background-color: #6d8cb0
+}
+.shortcutsTable
+{
+  border: 1px solid black;
+  width: 100%;
+}
+td
+{
+  border: 1px solid black;
 }

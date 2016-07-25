@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TubityForm from './TubityForm'
 import TubityShortcutInfo from './TubityShortcutInfo'
+import TubityShortcutsList from './TubityShortcutsList'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as tubityActions from '../actions/TubityActions'
@@ -12,6 +13,7 @@ class App extends Component{
            <div>
            <TubityForm getShortcut={getShortcut} isFetching={this.props.fetching} />
            <TubityShortcutInfo isFetching={this.props.fetching} shortcuts={this.props.shortcuts} />
+           <TubityShortcutsList shortcuts={this.props.shortcuts} />
            </div>
            )
   }
@@ -20,7 +22,7 @@ class App extends Component{
 function mapStateToProps(state) {
   return {
     shortcuts: state.tubityReducer.shortcuts,
-    fetching: state.tubityReducer.fetching    
+    fetching: state.tubityReducer.fetching
   }
 }
 
