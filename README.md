@@ -1,5 +1,7 @@
 # Tubity UI with React JS
 
+UI for [Tubity](https://github.com/ababich/tubity-roda) backend implemented with React JS.
+
 ## Installation
 
 ```bash
